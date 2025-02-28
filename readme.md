@@ -10,10 +10,14 @@ Cathedral is an open-source alternative to Cadence, designed for digital and ana
 - **Open-Source Libraries**: Community-driven component models and design tools
 - **Cross-Platform**: Runs on Linux, Windows, and macOS
 
+## Technology Stack
+Cathedral is primarily written in **C++** for high-performance computation and simulation, with additional scripting and UI elements in **Python** and **Qt/GTK**.
+
 ## Installation
 ### Prerequisites
 Ensure you have the following dependencies installed:
-- Python 3.x
+- C++ compiler (GCC/Clang/MSVC)
+- Python 3.x (for scripting and automation)
 - GTK/Qt (for GUI)
 - SPICE (e.g., ngspice, Xyce)
 - Verilog/VHDL compilers (Icarus Verilog, GHDL)
@@ -22,6 +26,9 @@ Ensure you have the following dependencies installed:
 ```sh
 git clone https://github.com/your-repo/cathedral.git
 cd cathedral
+mkdir build && cd build
+cmake ..
+make
 ./install.sh  # Or follow manual setup instructions
 ```
 
