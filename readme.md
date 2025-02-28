@@ -23,25 +23,10 @@ Ensure you have the following dependencies installed:
 - Verilog/VHDL compilers (Icarus Verilog, GHDL)
 
 ### Build Instructions
-```sh
-git clone https://github.com/your-repo/cathedral.git
-cd cathedral
-mkdir build && cd build
-cmake ..
-make
-./install.sh  # Or follow manual setup instructions
-```
+Cathedral is still in development and does not have a fully functional build system yet. Once an initial version is available, build instructions will be provided here.
 
 ## Usage
-### Running Cathedral
-```sh
-./cathedral
-```
-
-### Loading a Project
-```sh
-./cathedral my_project
-```
+Cathedral is not yet in a runnable state. Future versions will include details on how to start the application and load projects.
 
 ## Contribution
 We welcome contributions! If you are interested in improving Cathedral, follow these steps:
@@ -51,7 +36,7 @@ We welcome contributions! If you are interested in improving Cathedral, follow t
 4. Push to your fork and create a pull request
 
 ## License
-Cathedral is released under the MIT License.
+Cathedral is not currently licensed. A license will be chosen once the project reaches a more developed state.
 
 ## Contact
 For discussions, issues, and feature requests, please open an issue on GitHub or reach out to the developer community.
