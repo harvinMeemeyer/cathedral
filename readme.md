@@ -1,5 +1,7 @@
 # Cathedral
 
+"There are Cathedrals everywhere for those with the eyes to see" -Dr. Jordan B. Peterson
+
 Cathedral is an open-source alternative to Cadence, designed for digital and analog circuit design, simulation, and verification. This project aims to provide engineers, researchers, and hobbyists with an accessible, flexible, and feature-rich EDA (Electronic Design Automation) tool.
 
 ## Features
