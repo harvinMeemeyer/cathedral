@@ -225,6 +225,30 @@ src/gui/main_window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.s
 .PHONY : src/gui/main_window.cpp.s
 
+src/gui/wire_item.o: src/gui/wire_item.cpp.o
+.PHONY : src/gui/wire_item.o
+
+# target to build an object file
+src/gui/wire_item.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o
+.PHONY : src/gui/wire_item.cpp.o
+
+src/gui/wire_item.i: src/gui/wire_item.cpp.i
+.PHONY : src/gui/wire_item.i
+
+# target to preprocess a source file
+src/gui/wire_item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i
+.PHONY : src/gui/wire_item.cpp.i
+
+src/gui/wire_item.s: src/gui/wire_item.cpp.s
+.PHONY : src/gui/wire_item.s
+
+# target to generate assembly for a file
+src/gui/wire_item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s
+.PHONY : src/gui/wire_item.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... src/gui/main_window.o"
 	@echo "... src/gui/main_window.i"
 	@echo "... src/gui/main_window.s"
+	@echo "... src/gui/wire_item.o"
+	@echo "... src/gui/wire_item.i"
+	@echo "... src/gui/wire_item.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -18,6 +18,7 @@ set(SOURCES
     src/gui/component_item.cpp
     src/util/logging.cpp
     src/core/circuit.cpp
+    src/gui/wire_item.cpp
 )
 
 set(HEADERS

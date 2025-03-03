@@ -1,7 +1,8 @@
-CMakeFiles/Cathedral.dir/src/main.cpp.o: \
-  /Users/nolanlarison/cathedral/src/main.cpp \
-  /opt/anaconda3/include/qt/QtWidgets/QApplication \
-  /opt/anaconda3/include/qt/QtWidgets/qapplication.h \
+CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: \
+  /Users/nolanlarison/cathedral/src/gui/wire_item.cpp \
+  /Users/nolanlarison/cathedral/include/gui/wire_item.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsLineItem \
+  /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
   /opt/anaconda3/include/qt/QtWidgets/qtwidgetsglobal.h \
   /opt/anaconda3/include/qt/QtGui/qtguiglobal.h \
   /opt/anaconda3/include/qt/QtCore/qglobal.h \
@@ -974,19 +975,18 @@ CMakeFiles/Cathedral.dir/src/main.cpp.o: \
   /opt/anaconda3/include/qt/QtCore/qversiontagging.h \
   /opt/anaconda3/include/qt/QtGui/qtgui-config.h \
   /opt/anaconda3/include/qt/QtWidgets/qtwidgets-config.h \
-  /opt/anaconda3/include/qt/QtCore/qcoreapplication.h \
+  /opt/anaconda3/include/qt/QtCore/qobject.h \
+  /opt/anaconda3/include/qt/QtCore/qobjectdefs.h \
+  /opt/anaconda3/include/qt/QtCore/qnamespace.h \
+  /opt/anaconda3/include/qt/QtCore/qobjectdefs_impl.h \
   /opt/anaconda3/include/qt/QtCore/qstring.h \
   /opt/anaconda3/include/qt/QtCore/qchar.h \
   /opt/anaconda3/include/qt/QtCore/qbytearray.h \
   /opt/anaconda3/include/qt/QtCore/qrefcount.h \
-  /opt/anaconda3/include/qt/QtCore/qnamespace.h \
   /opt/anaconda3/include/qt/QtCore/qarraydata.h \
   /opt/anaconda3/include/qt/QtCore/qstringliteral.h \
   /opt/anaconda3/include/qt/QtCore/qstringalgorithms.h \
   /opt/anaconda3/include/qt/QtCore/qstringview.h \
-  /opt/anaconda3/include/qt/QtCore/qobject.h \
-  /opt/anaconda3/include/qt/QtCore/qobjectdefs.h \
-  /opt/anaconda3/include/qt/QtCore/qobjectdefs_impl.h \
   /opt/anaconda3/include/qt/QtCore/qlist.h \
   /opt/anaconda3/include/qt/QtCore/qalgorithms.h \
   /opt/anaconda3/include/qt/QtCore/qiterator.h \
@@ -1020,119 +1020,32 @@ CMakeFiles/Cathedral.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
   /opt/anaconda3/include/qt/QtCore/qobject_impl.h \
-  /opt/anaconda3/include/qt/QtCore/qcoreevent.h \
-  /opt/anaconda3/include/qt/QtCore/qeventloop.h \
-  /opt/anaconda3/include/qt/QtGui/qwindowdefs.h \
-  /opt/anaconda3/include/qt/QtCore/qpoint.h \
-  /opt/anaconda3/include/qt/QtCore/qsize.h \
-  /opt/anaconda3/include/qt/QtCore/qmargins.h \
-  /opt/anaconda3/include/qt/QtGui/qcursor.h \
-  /opt/anaconda3/include/qt/QtGui/qguiapplication.h \
-  /opt/anaconda3/include/qt/QtGui/qinputmethod.h \
-  /opt/anaconda3/include/qt/QtCore/qlocale.h \
   /opt/anaconda3/include/qt/QtCore/qvariant.h \
   /opt/anaconda3/include/qt/QtCore/qmap.h \
   /opt/anaconda3/include/qt/QtCore/qhash.h \
-  /opt/anaconda3/include/qt/QtCore/qshareddata.h \
-  /Users/nolanlarison/cathedral/include/gui/main_window.h \
-  /opt/anaconda3/include/qt/QtWidgets/QMainWindow \
-  /opt/anaconda3/include/qt/QtWidgets/qmainwindow.h \
-  /opt/anaconda3/include/qt/QtWidgets/qwidget.h \
-  /opt/anaconda3/include/qt/QtGui/qpaintdevice.h \
   /opt/anaconda3/include/qt/QtCore/qrect.h \
-  /opt/anaconda3/include/qt/QtGui/qpalette.h \
-  /opt/anaconda3/include/qt/QtGui/qcolor.h \
-  /opt/anaconda3/include/qt/QtGui/qrgb.h \
-  /opt/anaconda3/include/qt/QtGui/qrgba64.h \
-  /opt/anaconda3/include/qt/QtGui/qbrush.h \
+  /opt/anaconda3/include/qt/QtCore/qmargins.h \
+  /opt/anaconda3/include/qt/QtCore/qsize.h \
+  /opt/anaconda3/include/qt/QtCore/qpoint.h \
+  /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
   /opt/anaconda3/include/qt/QtGui/qmatrix.h \
   /opt/anaconda3/include/qt/QtGui/qpolygon.h \
   /opt/anaconda3/include/qt/QtGui/qregion.h \
+  /opt/anaconda3/include/qt/QtGui/qwindowdefs.h \
   /opt/anaconda3/include/qt/QtCore/qdatastream.h \
   /opt/anaconda3/include/qt/QtCore/qiodevice.h \
   /opt/anaconda3/include/qt/QtCore/qline.h \
   /opt/anaconda3/include/qt/QtGui/qtransform.h \
+  /opt/anaconda3/include/qt/QtGui/qpixmap.h \
+  /opt/anaconda3/include/qt/QtGui/qpaintdevice.h \
+  /opt/anaconda3/include/qt/QtGui/qcolor.h \
+  /opt/anaconda3/include/qt/QtGui/qrgb.h \
+  /opt/anaconda3/include/qt/QtGui/qrgba64.h \
+  /opt/anaconda3/include/qt/QtCore/qsharedpointer.h \
+  /opt/anaconda3/include/qt/QtCore/qshareddata.h \
+  /opt/anaconda3/include/qt/QtCore/qsharedpointer_impl.h \
   /opt/anaconda3/include/qt/QtGui/qimage.h \
   /opt/anaconda3/include/qt/QtGui/qpixelformat.h \
-  /opt/anaconda3/include/qt/QtGui/qpixmap.h \
-  /opt/anaconda3/include/qt/QtCore/qsharedpointer.h \
-  /opt/anaconda3/include/qt/QtCore/qsharedpointer_impl.h \
-  /opt/anaconda3/include/qt/QtGui/qfont.h \
-  /opt/anaconda3/include/qt/QtGui/qfontmetrics.h \
-  /opt/anaconda3/include/qt/QtGui/qfontinfo.h \
-  /opt/anaconda3/include/qt/QtWidgets/qsizepolicy.h \
-  /opt/anaconda3/include/qt/QtGui/qkeysequence.h \
-  /opt/anaconda3/include/qt/QtWidgets/qtabwidget.h \
-  /opt/anaconda3/include/qt/QtGui/qicon.h \
-  /opt/anaconda3/include/qt/QtWidgets/QGraphicsView \
-  /opt/anaconda3/include/qt/QtWidgets/qgraphicsview.h \
-  /opt/anaconda3/include/qt/QtGui/qpainter.h \
-  /opt/anaconda3/include/qt/QtGui/qtextoption.h \
+  /opt/anaconda3/include/qt/QtGui/QPen \
   /opt/anaconda3/include/qt/QtGui/qpen.h \
-  /opt/anaconda3/include/qt/QtWidgets/qscrollarea.h \
-  /opt/anaconda3/include/qt/QtWidgets/qabstractscrollarea.h \
-  /opt/anaconda3/include/qt/QtWidgets/qframe.h \
-  /opt/anaconda3/include/qt/QtWidgets/qgraphicsscene.h \
-  /opt/anaconda3/include/qt/QtWidgets/QGraphicsScene \
-  /opt/anaconda3/include/qt/QtWidgets/QTextEdit \
-  /opt/anaconda3/include/qt/QtWidgets/qtextedit.h \
-  /opt/anaconda3/include/qt/QtGui/qtextdocument.h \
-  /opt/anaconda3/include/qt/QtCore/qurl.h \
-  /opt/anaconda3/include/qt/QtGui/qtextcursor.h \
-  /opt/anaconda3/include/qt/QtGui/qtextformat.h \
-  /Users/nolanlarison/cathedral/include/core/circuit.h \
-  /Users/nolanlarison/cathedral/include/gui/component_item.h \
-  /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
-  /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
-  /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
-  /opt/anaconda3/include/qt/QtCore/QString \
-  /Users/nolanlarison/cathedral/include/gui/wire_item.h \
-  /opt/anaconda3/include/qt/QtWidgets/QGraphicsLineItem \
-  /Users/nolanlarison/cathedral/include/util/logging.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/ostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/bitset \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/format \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/container_adaptor.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/range_default_formatter.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/range_formatter.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_context.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_arg_store.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_args.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__ranges/ref_view.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/queue \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/deque \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stack \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_functions.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_char.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/write_escaped.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/escaped_output_table.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_floating_point.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__charconv/chars_format.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__charconv/to_chars_floating_point.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_integer.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_pointer.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/file_status.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/file_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/perms.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/path.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iomanip \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/operations.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/space_info.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/u8path.h
+  /opt/anaconda3/include/qt/QtGui/qbrush.h

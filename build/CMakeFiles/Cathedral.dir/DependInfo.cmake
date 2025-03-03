@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/nolanlarison/cathedral/src/core/circuit.cpp" "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/gui/component_item.cpp" "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/gui/main_window.cpp" "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o.d"
+  "/Users/nolanlarison/cathedral/src/gui/wire_item.cpp" "CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/main.cpp" "CMakeFiles/Cathedral.dir/src/main.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/main.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/util/logging.cpp" "CMakeFiles/Cathedral.dir/src/util/logging.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/util/logging.cpp.o.d"
   )

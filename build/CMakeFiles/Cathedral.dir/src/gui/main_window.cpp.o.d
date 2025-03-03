@@ -1078,6 +1078,8 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
   /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
   /opt/anaconda3/include/qt/QtCore/QString \
+  /Users/nolanlarison/cathedral/include/gui/wire_item.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsLineItem \
   /opt/anaconda3/include/qt/QtWidgets/QMenuBar \
   /opt/anaconda3/include/qt/QtWidgets/qmenubar.h \
   /opt/anaconda3/include/qt/QtWidgets/qmenu.h \

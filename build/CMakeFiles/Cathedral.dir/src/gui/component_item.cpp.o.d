@@ -1058,4 +1058,30 @@ CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsSceneMouseEvent \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicssceneevent.h \
   /opt/anaconda3/include/qt/QtCore/qcoreevent.h \
-  /opt/anaconda3/include/qt/QtCore/qset.h
+  /opt/anaconda3/include/qt/QtCore/qset.h \
+  /Users/nolanlarison/cathedral/include/gui/main_window.h \
+  /opt/anaconda3/include/qt/QtWidgets/QMainWindow \
+  /opt/anaconda3/include/qt/QtWidgets/qmainwindow.h \
+  /opt/anaconda3/include/qt/QtWidgets/qwidget.h \
+  /opt/anaconda3/include/qt/QtGui/qpalette.h \
+  /opt/anaconda3/include/qt/QtWidgets/qsizepolicy.h \
+  /opt/anaconda3/include/qt/QtGui/qcursor.h \
+  /opt/anaconda3/include/qt/QtGui/qkeysequence.h \
+  /opt/anaconda3/include/qt/QtWidgets/qtabwidget.h \
+  /opt/anaconda3/include/qt/QtGui/qicon.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsView \
+  /opt/anaconda3/include/qt/QtWidgets/qgraphicsview.h \
+  /opt/anaconda3/include/qt/QtWidgets/qscrollarea.h \
+  /opt/anaconda3/include/qt/QtWidgets/qabstractscrollarea.h \
+  /opt/anaconda3/include/qt/QtWidgets/qframe.h \
+  /opt/anaconda3/include/qt/QtWidgets/qgraphicsscene.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsScene \
+  /opt/anaconda3/include/qt/QtWidgets/QTextEdit \
+  /opt/anaconda3/include/qt/QtWidgets/qtextedit.h \
+  /opt/anaconda3/include/qt/QtGui/qtextdocument.h \
+  /opt/anaconda3/include/qt/QtCore/qurl.h \
+  /opt/anaconda3/include/qt/QtGui/qtextcursor.h \
+  /opt/anaconda3/include/qt/QtGui/qtextformat.h \
+  /Users/nolanlarison/cathedral/include/core/circuit.h \
+  /Users/nolanlarison/cathedral/include/gui/wire_item.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsLineItem

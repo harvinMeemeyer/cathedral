@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o"
   "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o.d"
+  "CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o"
+  "CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/main.cpp.o"
   "CMakeFiles/Cathedral.dir/src/main.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/util/logging.cpp.o"
