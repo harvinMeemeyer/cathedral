@@ -16,9 +16,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    bool isWireModeEnabled() const { return wireMode; }  // ✅ Getter for wireMode
-    bool isDrawingWire() const { return drawingWire; }   // ✅ Getter for drawingWire
-
+    bool isWireModeEnabled() const { return wireMode; }
+    bool isDrawingWire() const { return drawingWire; }
     void startWire(QPointF start);
     void finishWire(QPointF end);
 
@@ -26,6 +25,7 @@ private slots:
     void addResistor();
     void addCapacitor();
     void listCircuit();
+    void toggleWireMode(bool enabled);
 
 private:
     void createMenuBar();
@@ -36,13 +36,16 @@ private:
     QGraphicsScene *scene;
     QTextEdit *logConsole;
     Cathedral::Circuit circuit;
-    int componentX;  // Track position of new components
-    bool wireMode = false;  // ✅ Tracks if wire mode is on
+    int componentX = 0;
+    bool wireMode = false;
     bool drawingWire = false;
     QPointF wireStartPoint;
     WireItem* currentWire = nullptr;
 
-    void toggleWireMode(bool enabled);
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 };
 
 #endif // MAIN_WINDOW_H

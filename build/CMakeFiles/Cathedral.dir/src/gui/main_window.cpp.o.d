@@ -1089,4 +1089,12 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtWidgets/qtoolbar.h \
   /opt/anaconda3/include/qt/QtWidgets/QDockWidget \
   /opt/anaconda3/include/qt/QtWidgets/qdockwidget.h \
-  /opt/anaconda3/include/qt/QtWidgets/QAction
+  /opt/anaconda3/include/qt/QtWidgets/QAction \
+  /opt/anaconda3/include/qt/QtGui/QMouseEvent \
+  /opt/anaconda3/include/qt/QtGui/qevent.h \
+  /opt/anaconda3/include/qt/QtCore/qcoreevent.h \
+  /opt/anaconda3/include/qt/QtCore/qset.h \
+  /opt/anaconda3/include/qt/QtCore/qfile.h \
+  /opt/anaconda3/include/qt/QtCore/qfiledevice.h \
+  /opt/anaconda3/include/qt/QtGui/qvector2d.h \
+  /opt/anaconda3/include/qt/QtGui/qtouchdevice.h

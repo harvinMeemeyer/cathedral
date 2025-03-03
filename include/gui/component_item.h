@@ -7,6 +7,7 @@
 class ComponentItem : public QGraphicsItem {
 public:
     ComponentItem(const QString& type, int x, int y);
+    QString getType() const { return componentType; }  // Getter for type
 
     QRectF boundingRect() const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
