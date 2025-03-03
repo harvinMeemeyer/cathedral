@@ -1097,4 +1097,9 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtCore/qfile.h \
   /opt/anaconda3/include/qt/QtCore/qfiledevice.h \
   /opt/anaconda3/include/qt/QtGui/qvector2d.h \
-  /opt/anaconda3/include/qt/QtGui/qtouchdevice.h
+  /opt/anaconda3/include/qt/QtGui/qtouchdevice.h \
+  /opt/anaconda3/include/qt/QtCore/QDebug \
+  /opt/anaconda3/include/qt/QtCore/qdebug.h \
+  /opt/anaconda3/include/qt/QtCore/qtextstream.h \
+  /opt/anaconda3/include/qt/QtCore/qlocale.h \
+  /opt/anaconda3/include/qt/QtCore/qcontiguouscache.h

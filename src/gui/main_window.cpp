@@ -7,6 +7,7 @@
 #include <QTextEdit>
 #include <QAction>
 #include <QMouseEvent>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), componentX(0) {
@@ -104,17 +105,41 @@ void MainWindow::startWire(QPointF start) {
     if (!wireMode || drawingWire) return;
     drawingWire = true;
     wireStartPoint = start;
-    currentWire = new WireItem(start, start);
+    currentWire = new WireItem(start, start);  // Temporary wire
     scene->addItem(currentWire);
     logConsole->append("Wire started at (" + QString::number(start.x()) + ", " + QString::number(start.y()) + ")");
+    qDebug() << "Wire started at" << start << "currentWire:" << (currentWire != nullptr);
 }
 
 void MainWindow::finishWire(QPointF end) {
-    if (!wireMode || !drawingWire) return;
-    currentWire->setEndPoint(end);
+    if (!wireMode || !drawingWire || !currentWire) return;
+
+    QPointF startPos = wireStartPoint;
+    qreal dx = end.x() - startPos.x();
+    qreal dy = end.y() - startPos.y();
+    QPointF endPos;
+
+    qDebug() << "Calculating wire: dx =" << dx << "dy =" << dy << "abs(dx) =" << qAbs(dx) << "abs(dy) =" << qAbs(dy);
+
+    // Choose orthogonal direction based on dominant movement (strict comparison for balance)
+    if (qAbs(dx) > qAbs(dy) + 5) {  // Horizontal if dx significantly greater (threshold of 5)
+        endPos = QPointF(end.x(), startPos.y());
+        qDebug() << "Horizontal wire: start =" << startPos << "end =" << endPos;
+    } else if (qAbs(dy) > qAbs(dx) + 5) {  // Vertical if dy significantly greater (threshold of 5)
+        endPos = QPointF(startPos.x(), end.y());
+        qDebug() << "Vertical wire: start =" << startPos << "end =" << endPos;
+    } else {
+        // If displacements are very close, prefer horizontal (or adjust as needed)
+        endPos = QPointF(end.x(), startPos.y());
+        qDebug() << "Close displacements, defaulting to horizontal: start =" << startPos << "end =" << endPos;
+    }
+
+    currentWire->setEndPoint(endPos);
+    qDebug() << "Wire set: Line =" << currentWire->line();
     drawingWire = false;
     currentWire = nullptr;
-    logConsole->append("Wire completed at (" + QString::number(end.x()) + ", " + QString::number(end.y()) + ")");
+    logConsole->append("Wire completed at (" + QString::number(endPos.x()) + ", " + QString::number(endPos.y()) + ")");
+    scene->update();
 }
 
 void MainWindow::listCircuit() {
@@ -133,10 +158,10 @@ void MainWindow::listCircuit() {
 void MainWindow::toggleWireMode(bool enabled) {
     wireMode = enabled;
     if (wireMode) {
-        schematicView->setDragMode(QGraphicsView::NoDrag);  // Disable dragging for wire mode
+        schematicView->setDragMode(QGraphicsView::NoDrag);
         logConsole->append("Wire Mode ON");
     } else {
-        schematicView->setDragMode(QGraphicsView::RubberBandDrag);  // Restore dragging
+        schematicView->setDragMode(QGraphicsView::RubberBandDrag);
         if (drawingWire && currentWire) {
             scene->removeItem(currentWire);
             delete currentWire;
@@ -148,25 +173,24 @@ void MainWindow::toggleWireMode(bool enabled) {
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event) {
-    if (wireMode && !drawingWire) {
-        QPointF startPos = schematicView->mapToScene(event->pos());
-        startWire(startPos);
+    if (!wireMode) {
+        QMainWindow::mousePressEvent(event);
+        return;
     }
-    QMainWindow::mousePressEvent(event);
+
+    QPointF pos = schematicView->mapToScene(event->pos());
+    qDebug() << "Mouse press at" << pos << "drawingWire:" << drawingWire;
+    if (!drawingWire) {
+        startWire(pos);
+    } else {
+        finishWire(pos);
+    }
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event) {
-    if (wireMode && drawingWire && currentWire) {
-        QPointF currentPos = schematicView->mapToScene(event->pos());
-        currentWire->setEndPoint(currentPos);
-    }
     QMainWindow::mouseMoveEvent(event);
 }
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *event) {
-    if (wireMode && drawingWire) {
-        QPointF endPos = schematicView->mapToScene(event->pos());
-        finishWire(endPos);
-    }
     QMainWindow::mouseReleaseEvent(event);
 }

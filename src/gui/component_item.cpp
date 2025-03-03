@@ -2,11 +2,12 @@
 #include <QPainter>
 #include <QGraphicsSceneMouseEvent>
 #include "gui/main_window.h"
+#include <QDebug>
 
 ComponentItem::ComponentItem(const QString& type, int x, int y)
     : componentType(type), isDragging(false) {
     setPos(x, y);
-    setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable);  // Enable dragging
+    setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable);  // Enable dragging by default
 }
 
 QRectF ComponentItem::boundingRect() const {
@@ -53,27 +54,36 @@ void ComponentItem::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     if (!mainWin) return;
 
     if (mainWin->isWireModeEnabled()) {
+        qDebug() << "Wire mode active, handling wire at" << scenePos();
         if (mainWin->isDrawingWire()) {
             mainWin->finishWire(scenePos());
         } else {
             mainWin->startWire(scenePos());
         }
+        event->accept();  // Consume the event to prevent dragging
     } else {
-        isDragging = true;  // Start dragging only if not in wire mode
+        qDebug() << "Starting drag on" << componentType << "at" << scenePos();
+        isDragging = true;
         lastPosition = event->scenePos();
+        QGraphicsItem::mousePressEvent(event);  // Allow normal dragging
     }
-    QGraphicsItem::mousePressEvent(event);
 }
 
 void ComponentItem::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
-    if (!isDragging || qobject_cast<MainWindow*>(scene()->views().first()->parentWidget())->isWireModeEnabled()) {
-        QGraphicsItem::mouseMoveEvent(event);  // Let Qt handle moving if ItemIsMovable
+    MainWindow* mainWin = qobject_cast<MainWindow*>(scene()->views().first()->parentWidget());
+    if (!mainWin || mainWin->isWireModeEnabled()) {
+        qDebug() << "Wire mode active, ignoring drag on" << componentType;
+        event->accept();  // Prevent dragging in wire mode
         return;
     }
-    QPointF delta = event->scenePos() - lastPosition;
-    setPos(pos() + delta);
-    lastPosition = event->scenePos();
-    QGraphicsItem::mouseMoveEvent(event);
+
+    if (isDragging) {
+        QPointF delta = event->scenePos() - lastPosition;
+        setPos(pos() + delta);
+        lastPosition = event->scenePos();
+        qDebug() << "Dragging" << componentType << "to" << pos();
+    }
+    QGraphicsItem::mouseMoveEvent(event);  // Let Qt handle if needed
 }
 
 void ComponentItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
