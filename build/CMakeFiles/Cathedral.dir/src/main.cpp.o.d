@@ -1064,8 +1064,6 @@ CMakeFiles/Cathedral.dir/src/main.cpp.o: \
   /opt/anaconda3/include/qt/QtGui/qkeysequence.h \
   /opt/anaconda3/include/qt/QtWidgets/qtabwidget.h \
   /opt/anaconda3/include/qt/QtGui/qicon.h \
-  /opt/anaconda3/include/qt/QtWidgets/QDockWidget \
-  /opt/anaconda3/include/qt/QtWidgets/qdockwidget.h \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsView \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsview.h \
   /opt/anaconda3/include/qt/QtGui/qpainter.h \
@@ -1075,12 +1073,19 @@ CMakeFiles/Cathedral.dir/src/main.cpp.o: \
   /opt/anaconda3/include/qt/QtWidgets/qabstractscrollarea.h \
   /opt/anaconda3/include/qt/QtWidgets/qframe.h \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsscene.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsScene \
   /opt/anaconda3/include/qt/QtWidgets/QTextEdit \
   /opt/anaconda3/include/qt/QtWidgets/qtextedit.h \
   /opt/anaconda3/include/qt/QtGui/qtextdocument.h \
   /opt/anaconda3/include/qt/QtCore/qurl.h \
   /opt/anaconda3/include/qt/QtGui/qtextcursor.h \
   /opt/anaconda3/include/qt/QtGui/qtextformat.h \
+  /Users/nolanlarison/cathedral/include/core/circuit.h \
+  /Users/nolanlarison/cathedral/include/gui/component_item.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
+  /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
+  /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
+  /opt/anaconda3/include/qt/QtCore/QString \
   /Users/nolanlarison/cathedral/include/util/logging.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/istream \

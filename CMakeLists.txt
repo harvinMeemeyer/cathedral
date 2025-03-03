@@ -15,7 +15,9 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 set(SOURCES
     src/main.cpp
     src/gui/main_window.cpp
+    src/gui/component_item.cpp
     src/util/logging.cpp
+    src/core/circuit.cpp
 )
 
 set(HEADERS

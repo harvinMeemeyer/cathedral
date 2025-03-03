@@ -1054,8 +1054,6 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtGui/qkeysequence.h \
   /opt/anaconda3/include/qt/QtWidgets/qtabwidget.h \
   /opt/anaconda3/include/qt/QtGui/qicon.h \
-  /opt/anaconda3/include/qt/QtWidgets/QDockWidget \
-  /opt/anaconda3/include/qt/QtWidgets/qdockwidget.h \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsView \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsview.h \
   /opt/anaconda3/include/qt/QtGui/qpainter.h \
@@ -1065,6 +1063,7 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtWidgets/qabstractscrollarea.h \
   /opt/anaconda3/include/qt/QtWidgets/qframe.h \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsscene.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsScene \
   /opt/anaconda3/include/qt/QtWidgets/QTextEdit \
   /opt/anaconda3/include/qt/QtWidgets/qtextedit.h \
   /opt/anaconda3/include/qt/QtGui/qtextdocument.h \
@@ -1073,6 +1072,12 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtCore/qurl.h \
   /opt/anaconda3/include/qt/QtGui/qtextcursor.h \
   /opt/anaconda3/include/qt/QtGui/qtextformat.h \
+  /Users/nolanlarison/cathedral/include/core/circuit.h \
+  /Users/nolanlarison/cathedral/include/gui/component_item.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
+  /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
+  /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
+  /opt/anaconda3/include/qt/QtCore/QString \
   /opt/anaconda3/include/qt/QtWidgets/QMenuBar \
   /opt/anaconda3/include/qt/QtWidgets/qmenubar.h \
   /opt/anaconda3/include/qt/QtWidgets/qmenu.h \
@@ -1080,13 +1085,6 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtWidgets/qactiongroup.h \
   /opt/anaconda3/include/qt/QtWidgets/QToolBar \
   /opt/anaconda3/include/qt/QtWidgets/qtoolbar.h \
-  /opt/anaconda3/include/qt/QtWidgets/QFileDialog \
-  /opt/anaconda3/include/qt/QtWidgets/qfiledialog.h \
-  /opt/anaconda3/include/qt/QtCore/qdir.h \
-  /opt/anaconda3/include/qt/QtCore/qfileinfo.h \
-  /opt/anaconda3/include/qt/QtCore/qfile.h \
-  /opt/anaconda3/include/qt/QtCore/qfiledevice.h \
-  /opt/anaconda3/include/qt/QtWidgets/qdialog.h \
-  /opt/anaconda3/include/qt/QtWidgets/QMessageBox \
-  /opt/anaconda3/include/qt/QtWidgets/qmessagebox.h \
-  /opt/anaconda3/include/qt/QtWidgets/QGraphicsScene
+  /opt/anaconda3/include/qt/QtWidgets/QDockWidget \
+  /opt/anaconda3/include/qt/QtWidgets/qdockwidget.h \
+  /opt/anaconda3/include/qt/QtWidgets/QAction

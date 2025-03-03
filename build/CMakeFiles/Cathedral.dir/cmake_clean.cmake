@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o"
   "CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o.d"
+  "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o"
+  "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o.d"
+  "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o"
+  "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o"
   "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/main.cpp.o"

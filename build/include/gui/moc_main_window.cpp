@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[5];
-    char stringdata0[38];
+    char stringdata0[49];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,13 +33,14 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 8), // "openFile"
-QT_MOC_LITERAL(2, 20, 0), // ""
-QT_MOC_LITERAL(3, 21, 8), // "saveFile"
-QT_MOC_LITERAL(4, 30, 7) // "exitApp"
+QT_MOC_LITERAL(1, 11, 11), // "addResistor"
+QT_MOC_LITERAL(2, 23, 0), // ""
+QT_MOC_LITERAL(3, 24, 12), // "addCapacitor"
+QT_MOC_LITERAL(4, 37, 11) // "listCircuit"
 
     },
-    "MainWindow\0openFile\0\0saveFile\0exitApp"
+    "MainWindow\0addResistor\0\0addCapacitor\0"
+    "listCircuit"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,9 +76,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->openFile(); break;
-        case 1: _t->saveFile(); break;
-        case 2: _t->exitApp(); break;
+        case 0: _t->addResistor(); break;
+        case 1: _t->addCapacitor(); break;
+        case 2: _t->listCircuit(); break;
         default: ;
         }
     }

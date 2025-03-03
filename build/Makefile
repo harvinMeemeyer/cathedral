@@ -153,6 +153,54 @@ include/gui/moc_main_window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.s
 .PHONY : include/gui/moc_main_window.cpp.s
 
+src/core/circuit.o: src/core/circuit.cpp.o
+.PHONY : src/core/circuit.o
+
+# target to build an object file
+src/core/circuit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o
+.PHONY : src/core/circuit.cpp.o
+
+src/core/circuit.i: src/core/circuit.cpp.i
+.PHONY : src/core/circuit.i
+
+# target to preprocess a source file
+src/core/circuit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/core/circuit.cpp.i
+.PHONY : src/core/circuit.cpp.i
+
+src/core/circuit.s: src/core/circuit.cpp.s
+.PHONY : src/core/circuit.s
+
+# target to generate assembly for a file
+src/core/circuit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/core/circuit.cpp.s
+.PHONY : src/core/circuit.cpp.s
+
+src/gui/component_item.o: src/gui/component_item.cpp.o
+.PHONY : src/gui/component_item.o
+
+# target to build an object file
+src/gui/component_item.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o
+.PHONY : src/gui/component_item.cpp.o
+
+src/gui/component_item.i: src/gui/component_item.cpp.i
+.PHONY : src/gui/component_item.i
+
+# target to preprocess a source file
+src/gui/component_item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.i
+.PHONY : src/gui/component_item.cpp.i
+
+src/gui/component_item.s: src/gui/component_item.cpp.s
+.PHONY : src/gui/component_item.s
+
+# target to generate assembly for a file
+src/gui/component_item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.s
+.PHONY : src/gui/component_item.cpp.s
+
 src/gui/main_window.o: src/gui/main_window.cpp.o
 .PHONY : src/gui/main_window.o
 
@@ -237,6 +285,12 @@ help:
 	@echo "... include/gui/moc_main_window.o"
 	@echo "... include/gui/moc_main_window.i"
 	@echo "... include/gui/moc_main_window.s"
+	@echo "... src/core/circuit.o"
+	@echo "... src/core/circuit.i"
+	@echo "... src/core/circuit.s"
+	@echo "... src/gui/component_item.o"
+	@echo "... src/gui/component_item.i"
+	@echo "... src/gui/component_item.s"
 	@echo "... src/gui/main_window.o"
 	@echo "... src/gui/main_window.i"
 	@echo "... src/gui/main_window.s"
