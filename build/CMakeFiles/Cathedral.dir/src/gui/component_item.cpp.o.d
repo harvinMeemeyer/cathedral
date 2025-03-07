@@ -1,10 +1,10 @@
 CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: \
   /Users/nolanlarison/cathedral/src/gui/component_item.cpp \
   /Users/nolanlarison/cathedral/include/gui/component_item.h \
-  /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
-  /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
-  /opt/anaconda3/include/qt/QtWidgets/qtwidgetsglobal.h \
-  /opt/anaconda3/include/qt/QtGui/qtguiglobal.h \
+  /opt/anaconda3/include/qt/QtCore/QObject \
+  /opt/anaconda3/include/qt/QtCore/qobject.h \
+  /opt/anaconda3/include/qt/QtCore/qobjectdefs.h \
+  /opt/anaconda3/include/qt/QtCore/qnamespace.h \
   /opt/anaconda3/include/qt/QtCore/qglobal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assert \
@@ -973,11 +973,6 @@ CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/unary_negate.h \
   /opt/anaconda3/include/qt/QtCore/qnumeric.h \
   /opt/anaconda3/include/qt/QtCore/qversiontagging.h \
-  /opt/anaconda3/include/qt/QtGui/qtgui-config.h \
-  /opt/anaconda3/include/qt/QtWidgets/qtwidgets-config.h \
-  /opt/anaconda3/include/qt/QtCore/qobject.h \
-  /opt/anaconda3/include/qt/QtCore/qobjectdefs.h \
-  /opt/anaconda3/include/qt/QtCore/qnamespace.h \
   /opt/anaconda3/include/qt/QtCore/qobjectdefs_impl.h \
   /opt/anaconda3/include/qt/QtCore/qstring.h \
   /opt/anaconda3/include/qt/QtCore/qchar.h \
@@ -1020,6 +1015,12 @@ CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
   /opt/anaconda3/include/qt/QtCore/qobject_impl.h \
+  /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
+  /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
+  /opt/anaconda3/include/qt/QtWidgets/qtwidgetsglobal.h \
+  /opt/anaconda3/include/qt/QtGui/qtguiglobal.h \
+  /opt/anaconda3/include/qt/QtGui/qtgui-config.h \
+  /opt/anaconda3/include/qt/QtWidgets/qtwidgets-config.h \
   /opt/anaconda3/include/qt/QtCore/qvariant.h \
   /opt/anaconda3/include/qt/QtCore/qmap.h \
   /opt/anaconda3/include/qt/QtCore/qhash.h \
@@ -1047,6 +1048,8 @@ CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: \
   /opt/anaconda3/include/qt/QtGui/qimage.h \
   /opt/anaconda3/include/qt/QtGui/qpixelformat.h \
   /opt/anaconda3/include/qt/QtCore/QString \
+  /opt/anaconda3/include/qt/QtCore/QList \
+  /opt/anaconda3/include/qt/QtCore/QPointF \
   /opt/anaconda3/include/qt/QtGui/QPainter \
   /opt/anaconda3/include/qt/QtGui/qpainter.h \
   /opt/anaconda3/include/qt/QtGui/qtextoption.h \

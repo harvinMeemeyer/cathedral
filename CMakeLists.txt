@@ -1,39 +1,47 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
+
 project(Cathedral)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Output directory for compiled binaries
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-# Find Qt
-set(Qt5_DIR "/opt/homebrew/opt/qt/lib/cmake/Qt5")  # Adjust based on `brew --prefix qt`
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-# Add sources
-set(SOURCES
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_BINARY_DIR}/include
+)
+
+set(SOURCE_FILES
     src/main.cpp
     src/gui/main_window.cpp
     src/gui/component_item.cpp
+    src/gui/wire_item.cpp
     src/util/logging.cpp
     src/core/circuit.cpp
-    src/gui/wire_item.cpp
 )
 
-set(HEADERS
+set(HEADER_FILES
     include/gui/main_window.h
+    include/gui/component_item.h  # Explicitly include for MOC
+    include/gui/wire_item.h
+    include/util/logging.h
+    include/core/circuit.h
 )
 
-# ✅ Tell CMake to process Qt's Q_OBJECT macros
-qt5_wrap_cpp(MOC_SOURCES ${HEADERS})
+add_executable(Cathedral ${SOURCE_FILES} ${HEADER_FILES})
 
-# Include directories
-include_directories(include)
-
-# Create executable
-add_executable(Cathedral ${SOURCES} ${MOC_SOURCES})  # ✅ Add MOC-generated sources
 target_link_libraries(Cathedral Qt5::Widgets)
 
-# Enable debugging symbols
-set(CMAKE_BUILD_TYPE Debug)
+set_target_properties(Cathedral PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
+
+add_custom_command(
+    TARGET Cathedral POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E echo "Build completed. Executable at: ${CMAKE_BINARY_DIR}/bin/Cathedral"
+)

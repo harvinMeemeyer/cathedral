@@ -69,17 +69,34 @@ include CMakeFiles/Cathedral.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Cathedral.dir/flags.make
 
-include/gui/moc_main_window.cpp: /Users/nolanlarison/cathedral/include/gui/main_window.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating include/gui/moc_main_window.cpp"
-	cd /Users/nolanlarison/cathedral/build/include/gui && /opt/anaconda3/bin/moc @/Users/nolanlarison/cathedral/build/include/gui/moc_main_window.cpp_parameters
+Cathedral_autogen/timestamp: /opt/anaconda3/bin/moc
+Cathedral_autogen/timestamp: /opt/anaconda3/bin/uic
+Cathedral_autogen/timestamp: CMakeFiles/Cathedral.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Cathedral"
+	/opt/homebrew/bin/cmake -E cmake_autogen /Users/nolanlarison/cathedral/build/CMakeFiles/Cathedral_autogen.dir/AutogenInfo.json ""
+	/opt/homebrew/bin/cmake -E touch /Users/nolanlarison/cathedral/build/Cathedral_autogen/timestamp
 
 CMakeFiles/Cathedral.dir/codegen:
 .PHONY : CMakeFiles/Cathedral.dir/codegen
 
+CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o: CMakeFiles/Cathedral.dir/flags.make
+CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o: Cathedral_autogen/mocs_compilation.cpp
+CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o -MF CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o -c /Users/nolanlarison/cathedral/build/Cathedral_autogen/mocs_compilation.cpp
+
+CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nolanlarison/cathedral/build/Cathedral_autogen/mocs_compilation.cpp > CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nolanlarison/cathedral/build/Cathedral_autogen/mocs_compilation.cpp -o CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/Cathedral.dir/src/main.cpp.o: CMakeFiles/Cathedral.dir/flags.make
 CMakeFiles/Cathedral.dir/src/main.cpp.o: /Users/nolanlarison/cathedral/src/main.cpp
 CMakeFiles/Cathedral.dir/src/main.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cathedral.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cathedral.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/main.cpp.o -MF CMakeFiles/Cathedral.dir/src/main.cpp.o.d -o CMakeFiles/Cathedral.dir/src/main.cpp.o -c /Users/nolanlarison/cathedral/src/main.cpp
 
 CMakeFiles/Cathedral.dir/src/main.cpp.i: cmake_force
@@ -93,7 +110,7 @@ CMakeFiles/Cathedral.dir/src/main.cpp.s: cmake_force
 CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: CMakeFiles/Cathedral.dir/flags.make
 CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: /Users/nolanlarison/cathedral/src/gui/main_window.cpp
 CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o -MF CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o.d -o CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o -c /Users/nolanlarison/cathedral/src/gui/main_window.cpp
 
 CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.i: cmake_force
@@ -107,7 +124,7 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.s: cmake_force
 CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: CMakeFiles/Cathedral.dir/flags.make
 CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: /Users/nolanlarison/cathedral/src/gui/component_item.cpp
 CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o -MF CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o.d -o CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o -c /Users/nolanlarison/cathedral/src/gui/component_item.cpp
 
 CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.i: cmake_force
@@ -118,10 +135,24 @@ CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nolanlarison/cathedral/src/gui/component_item.cpp -o CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.s
 
+CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: CMakeFiles/Cathedral.dir/flags.make
+CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: /Users/nolanlarison/cathedral/src/gui/wire_item.cpp
+CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o -MF CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o.d -o CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o -c /Users/nolanlarison/cathedral/src/gui/wire_item.cpp
+
+CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nolanlarison/cathedral/src/gui/wire_item.cpp > CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i
+
+CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nolanlarison/cathedral/src/gui/wire_item.cpp -o CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s
+
 CMakeFiles/Cathedral.dir/src/util/logging.cpp.o: CMakeFiles/Cathedral.dir/flags.make
 CMakeFiles/Cathedral.dir/src/util/logging.cpp.o: /Users/nolanlarison/cathedral/src/util/logging.cpp
 CMakeFiles/Cathedral.dir/src/util/logging.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Cathedral.dir/src/util/logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Cathedral.dir/src/util/logging.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/util/logging.cpp.o -MF CMakeFiles/Cathedral.dir/src/util/logging.cpp.o.d -o CMakeFiles/Cathedral.dir/src/util/logging.cpp.o -c /Users/nolanlarison/cathedral/src/util/logging.cpp
 
 CMakeFiles/Cathedral.dir/src/util/logging.cpp.i: cmake_force
@@ -135,7 +166,7 @@ CMakeFiles/Cathedral.dir/src/util/logging.cpp.s: cmake_force
 CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o: CMakeFiles/Cathedral.dir/flags.make
 CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o: /Users/nolanlarison/cathedral/src/core/circuit.cpp
 CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o -MF CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o.d -o CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o -c /Users/nolanlarison/cathedral/src/core/circuit.cpp
 
 CMakeFiles/Cathedral.dir/src/core/circuit.cpp.i: cmake_force
@@ -146,54 +177,26 @@ CMakeFiles/Cathedral.dir/src/core/circuit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cathedral.dir/src/core/circuit.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nolanlarison/cathedral/src/core/circuit.cpp -o CMakeFiles/Cathedral.dir/src/core/circuit.cpp.s
 
-CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: CMakeFiles/Cathedral.dir/flags.make
-CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: /Users/nolanlarison/cathedral/src/gui/wire_item.cpp
-CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o -MF CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o.d -o CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o -c /Users/nolanlarison/cathedral/src/gui/wire_item.cpp
-
-CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nolanlarison/cathedral/src/gui/wire_item.cpp > CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.i
-
-CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nolanlarison/cathedral/src/gui/wire_item.cpp -o CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.s
-
-CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o: CMakeFiles/Cathedral.dir/flags.make
-CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o: include/gui/moc_main_window.cpp
-CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o: CMakeFiles/Cathedral.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o -MF CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o.d -o CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o -c /Users/nolanlarison/cathedral/build/include/gui/moc_main_window.cpp
-
-CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nolanlarison/cathedral/build/include/gui/moc_main_window.cpp > CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.i
-
-CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nolanlarison/cathedral/build/include/gui/moc_main_window.cpp -o CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.s
-
 # Object files for target Cathedral
 Cathedral_OBJECTS = \
+"CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Cathedral.dir/src/main.cpp.o" \
 "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o" \
 "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o" \
-"CMakeFiles/Cathedral.dir/src/util/logging.cpp.o" \
-"CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o" \
 "CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o" \
-"CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o"
+"CMakeFiles/Cathedral.dir/src/util/logging.cpp.o" \
+"CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o"
 
 # External object files for target Cathedral
 Cathedral_EXTERNAL_OBJECTS =
 
+bin/Cathedral: CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o
 bin/Cathedral: CMakeFiles/Cathedral.dir/src/main.cpp.o
 bin/Cathedral: CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o
 bin/Cathedral: CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o
+bin/Cathedral: CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o
 bin/Cathedral: CMakeFiles/Cathedral.dir/src/util/logging.cpp.o
 bin/Cathedral: CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o
-bin/Cathedral: CMakeFiles/Cathedral.dir/src/gui/wire_item.cpp.o
-bin/Cathedral: CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o
 bin/Cathedral: CMakeFiles/Cathedral.dir/build.make
 bin/Cathedral: /opt/anaconda3/lib/libQt5Widgets.5.15.2.dylib
 bin/Cathedral: /opt/anaconda3/lib/libQt5Gui.5.15.2.dylib
@@ -201,6 +204,7 @@ bin/Cathedral: /opt/anaconda3/lib/libQt5Core.5.15.2.dylib
 bin/Cathedral: CMakeFiles/Cathedral.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nolanlarison/cathedral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/Cathedral"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cathedral.dir/link.txt --verbose=$(VERBOSE)
+	/opt/homebrew/bin/cmake -E echo Build\ completed.\ Executable\ at:\ /Users/nolanlarison/cathedral/build/bin/Cathedral
 
 # Rule to build all files generated by this target.
 CMakeFiles/Cathedral.dir/build: bin/Cathedral
@@ -210,7 +214,7 @@ CMakeFiles/Cathedral.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/Cathedral.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/Cathedral.dir/clean
 
-CMakeFiles/Cathedral.dir/depend: include/gui/moc_main_window.cpp
+CMakeFiles/Cathedral.dir/depend: Cathedral_autogen/timestamp
 	cd /Users/nolanlarison/cathedral/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nolanlarison/cathedral /Users/nolanlarison/cathedral /Users/nolanlarison/cathedral/build /Users/nolanlarison/cathedral/build /Users/nolanlarison/cathedral/build/CMakeFiles/Cathedral.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Cathedral.dir/depend
 

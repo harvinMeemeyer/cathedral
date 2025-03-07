@@ -1082,10 +1082,13 @@ CMakeFiles/Cathedral.dir/src/main.cpp.o: \
   /opt/anaconda3/include/qt/QtGui/qtextformat.h \
   /Users/nolanlarison/cathedral/include/core/circuit.h \
   /Users/nolanlarison/cathedral/include/gui/component_item.h \
+  /opt/anaconda3/include/qt/QtCore/QObject \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
   /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
   /opt/anaconda3/include/qt/QtCore/QString \
+  /opt/anaconda3/include/qt/QtCore/QList \
+  /opt/anaconda3/include/qt/QtCore/QPointF \
   /Users/nolanlarison/cathedral/include/gui/wire_item.h \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsLineItem \
   /Users/nolanlarison/cathedral/include/util/logging.h \

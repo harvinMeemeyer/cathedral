@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/nolanlarison/cathedral/build/include/gui/moc_main_window.cpp" "CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o.d"
+  "" "Cathedral_autogen/timestamp" "custom" "Cathedral_autogen/deps"
+  "/Users/nolanlarison/cathedral/build/Cathedral_autogen/mocs_compilation.cpp" "CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/core/circuit.cpp" "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/gui/component_item.cpp" "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o.d"
   "/Users/nolanlarison/cathedral/src/gui/main_window.cpp" "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o" "gcc" "CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o.d"

@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o"
-  "CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o.d"
+  "CMakeFiles/Cathedral_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/Cathedral_autogen.dir/ParseCache.txt"
+  "Cathedral_autogen"
+  "CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o"
   "CMakeFiles/Cathedral.dir/src/core/circuit.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/gui/component_item.cpp.o"
@@ -13,9 +16,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Cathedral.dir/src/main.cpp.o.d"
   "CMakeFiles/Cathedral.dir/src/util/logging.cpp.o"
   "CMakeFiles/Cathedral.dir/src/util/logging.cpp.o.d"
+  "Cathedral_autogen/mocs_compilation.cpp"
+  "Cathedral_autogen/timestamp"
   "bin/Cathedral"
   "bin/Cathedral.pdb"
-  "include/gui/moc_main_window.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

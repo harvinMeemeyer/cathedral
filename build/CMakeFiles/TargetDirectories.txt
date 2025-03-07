@@ -1,3 +1,5 @@
 /Users/nolanlarison/cathedral/build/CMakeFiles/Cathedral.dir
 /Users/nolanlarison/cathedral/build/CMakeFiles/edit_cache.dir
 /Users/nolanlarison/cathedral/build/CMakeFiles/rebuild_cache.dir
+/Users/nolanlarison/cathedral/build/CMakeFiles/Cathedral_autogen_timestamp_deps.dir
+/Users/nolanlarison/cathedral/build/CMakeFiles/Cathedral_autogen.dir

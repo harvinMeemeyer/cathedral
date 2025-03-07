@@ -129,29 +129,55 @@ Cathedral/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/build
 .PHONY : Cathedral/fast
 
-include/gui/moc_main_window.o: include/gui/moc_main_window.cpp.o
-.PHONY : include/gui/moc_main_window.o
+#=============================================================================
+# Target rules for targets named Cathedral_autogen_timestamp_deps
+
+# Build rule for target.
+Cathedral_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cathedral_autogen_timestamp_deps
+.PHONY : Cathedral_autogen_timestamp_deps
+
+# fast build rule for target.
+Cathedral_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral_autogen_timestamp_deps.dir/build.make CMakeFiles/Cathedral_autogen_timestamp_deps.dir/build
+.PHONY : Cathedral_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named Cathedral_autogen
+
+# Build rule for target.
+Cathedral_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cathedral_autogen
+.PHONY : Cathedral_autogen
+
+# fast build rule for target.
+Cathedral_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral_autogen.dir/build.make CMakeFiles/Cathedral_autogen.dir/build
+.PHONY : Cathedral_autogen/fast
+
+Cathedral_autogen/mocs_compilation.o: Cathedral_autogen/mocs_compilation.cpp.o
+.PHONY : Cathedral_autogen/mocs_compilation.o
 
 # target to build an object file
-include/gui/moc_main_window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.o
-.PHONY : include/gui/moc_main_window.cpp.o
+Cathedral_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.o
+.PHONY : Cathedral_autogen/mocs_compilation.cpp.o
 
-include/gui/moc_main_window.i: include/gui/moc_main_window.cpp.i
-.PHONY : include/gui/moc_main_window.i
+Cathedral_autogen/mocs_compilation.i: Cathedral_autogen/mocs_compilation.cpp.i
+.PHONY : Cathedral_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-include/gui/moc_main_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.i
-.PHONY : include/gui/moc_main_window.cpp.i
+Cathedral_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.i
+.PHONY : Cathedral_autogen/mocs_compilation.cpp.i
 
-include/gui/moc_main_window.s: include/gui/moc_main_window.cpp.s
-.PHONY : include/gui/moc_main_window.s
+Cathedral_autogen/mocs_compilation.s: Cathedral_autogen/mocs_compilation.cpp.s
+.PHONY : Cathedral_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-include/gui/moc_main_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/include/gui/moc_main_window.cpp.s
-.PHONY : include/gui/moc_main_window.cpp.s
+Cathedral_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cathedral.dir/build.make CMakeFiles/Cathedral.dir/Cathedral_autogen/mocs_compilation.cpp.s
+.PHONY : Cathedral_autogen/mocs_compilation.cpp.s
 
 src/core/circuit.o: src/core/circuit.cpp.o
 .PHONY : src/core/circuit.o
@@ -305,10 +331,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Cathedral_autogen"
+	@echo "... Cathedral_autogen_timestamp_deps"
 	@echo "... Cathedral"
-	@echo "... include/gui/moc_main_window.o"
-	@echo "... include/gui/moc_main_window.i"
-	@echo "... include/gui/moc_main_window.s"
+	@echo "... Cathedral_autogen/mocs_compilation.o"
+	@echo "... Cathedral_autogen/mocs_compilation.i"
+	@echo "... Cathedral_autogen/mocs_compilation.s"
 	@echo "... src/core/circuit.o"
 	@echo "... src/core/circuit.i"
 	@echo "... src/core/circuit.s"

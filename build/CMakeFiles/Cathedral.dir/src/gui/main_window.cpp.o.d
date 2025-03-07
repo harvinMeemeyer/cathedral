@@ -1074,10 +1074,13 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtGui/qtextformat.h \
   /Users/nolanlarison/cathedral/include/core/circuit.h \
   /Users/nolanlarison/cathedral/include/gui/component_item.h \
+  /opt/anaconda3/include/qt/QtCore/QObject \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsItem \
   /opt/anaconda3/include/qt/QtWidgets/qgraphicsitem.h \
   /opt/anaconda3/include/qt/QtGui/qpainterpath.h \
   /opt/anaconda3/include/qt/QtCore/QString \
+  /opt/anaconda3/include/qt/QtCore/QList \
+  /opt/anaconda3/include/qt/QtCore/QPointF \
   /Users/nolanlarison/cathedral/include/gui/wire_item.h \
   /opt/anaconda3/include/qt/QtWidgets/QGraphicsLineItem \
   /opt/anaconda3/include/qt/QtWidgets/QMenuBar \
@@ -1098,6 +1101,7 @@ CMakeFiles/Cathedral.dir/src/gui/main_window.cpp.o: \
   /opt/anaconda3/include/qt/QtCore/qfiledevice.h \
   /opt/anaconda3/include/qt/QtGui/qvector2d.h \
   /opt/anaconda3/include/qt/QtGui/qtouchdevice.h \
+  /opt/anaconda3/include/qt/QtGui/QKeyEvent \
   /opt/anaconda3/include/qt/QtCore/QDebug \
   /opt/anaconda3/include/qt/QtCore/qdebug.h \
   /opt/anaconda3/include/qt/QtCore/qtextstream.h \

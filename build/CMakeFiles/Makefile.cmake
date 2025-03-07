@@ -170,10 +170,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.31.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/Cathedral_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Cathedral.dir/DependInfo.cmake"
+  "CMakeFiles/Cathedral_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/Cathedral_autogen.dir/DependInfo.cmake"
   )
