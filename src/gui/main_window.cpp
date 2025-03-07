@@ -98,6 +98,7 @@ void MainWindow::addResistor() {
     scene->addItem(resistor);
     connect(resistor, &ComponentItem::positionChanged, this, &MainWindow::onComponentMoved);
     componentX += 50;
+    resistor->setFlag(QGraphicsItem::ItemIsMovable, !deleteMode);
 }
 
 void MainWindow::addCapacitor() {
@@ -107,6 +108,7 @@ void MainWindow::addCapacitor() {
     scene->addItem(capacitor);
     connect(capacitor, &ComponentItem::positionChanged, this, &MainWindow::onComponentMoved);
     componentX += 50;
+    capacitor->setFlag(QGraphicsItem::ItemIsMovable, !deleteMode);
 }
 
 void MainWindow::startWire(QPointF start) {
@@ -238,10 +240,12 @@ void MainWindow::onComponentMoved(ComponentItem *component) {
 }
 
 void MainWindow::deleteComponent(ComponentItem *component) {
+    qDebug() << "Deleting component:" << component->getType();
     // Remove all wires connected to this component
     for (int i = wireConnections.size() - 1; i >= 0; --i) {
         WireConnection &connection = wireConnections[i];
         if (connection.startComponent == component || connection.endComponent == component) {
+            qDebug() << "Removing connected wire";
             // Remove wire segments from scene
             for (WireItem *segment : connection.segments) {
                 scene->removeItem(segment);
@@ -254,11 +258,12 @@ void MainWindow::deleteComponent(ComponentItem *component) {
 
     // Remove the component from the scene
     scene->removeItem(component);
-    delete component;
     logConsole->append("Deleted component: " + component->getType());
+    delete component;
 }
 
 void MainWindow::deleteWire(WireItem *wire) {
+    qDebug() << "Deleting wire";
     // Find the wire connection containing this wire segment
     for (int i = 0; i < wireConnections.size(); ++i) {
         WireConnection &connection = wireConnections[i];
@@ -290,8 +295,11 @@ void MainWindow::listCircuit() {
 }
 
 void MainWindow::toggleWireMode(bool enabled) {
+    if (wireMode == enabled) return;
     wireMode = enabled;
+    toggleWireModeAction->blockSignals(true);
     toggleWireModeAction->setChecked(wireMode);
+    toggleWireModeAction->blockSignals(false);
     if (wireMode) {
         if (deleteMode) {
             toggleDeleteMode(false);
@@ -301,43 +309,71 @@ void MainWindow::toggleWireMode(bool enabled) {
     } else {
         if (!deleteMode) {
             schematicView->setDragMode(QGraphicsView::RubberBandDrag);
+            // Re-enable dragging for components
+            for (auto *item : scene->items()) {
+                if (auto *comp = dynamic_cast<ComponentItem*>(item)) {
+                    comp->setFlag(QGraphicsItem::ItemIsMovable, true);
+                }
+            }
         }
         logConsole->append("Wire Mode OFF");
     }
 }
 
 void MainWindow::toggleDeleteMode(bool enabled) {
+    if (deleteMode == enabled) return;
     deleteMode = enabled;
+    toggleDeleteModeAction->blockSignals(true);
     toggleDeleteModeAction->setChecked(deleteMode);
+    toggleDeleteModeAction->blockSignals(false);
     if (deleteMode) {
         if (wireMode) {
             toggleWireMode(false);
         }
-        schematicView->setDragMode(QGraphicsView::NoDrag);  // Explicitly disable drag
+        schematicView->setDragMode(QGraphicsView::NoDrag);
+        // Disable dragging for all components
+        for (auto *item : scene->items()) {
+            if (auto *comp = dynamic_cast<ComponentItem*>(item)) {
+                comp->setFlag(QGraphicsItem::ItemIsMovable, false);
+                qDebug() << "Disabled movable for:" << comp->getType();
+            }
+        }
         logConsole->append("Delete Mode ON");
     } else {
         if (!wireMode) {
-            schematicView->setDragMode(QGraphicsView::RubberBandDrag);  // Re-enable drag only if not in wire mode
+            schematicView->setDragMode(QGraphicsView::RubberBandDrag);
+            // Re-enable dragging for components
+            for (auto *item : scene->items()) {
+                if (auto *comp = dynamic_cast<ComponentItem*>(item)) {
+                    comp->setFlag(QGraphicsItem::ItemIsMovable, true);
+                    qDebug() << "Enabled movable for:" << comp->getType();
+                }
+            }
         }
         logConsole->append("Delete Mode OFF");
     }
+    qDebug() << "Delete Mode set to:" << deleteMode << "Drag Mode:" << schematicView->dragMode();
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event) {
-    qDebug() << "Mouse press in mode - Wire:" << wireMode << "Delete:" << deleteMode;  // Debug mode state
+    qDebug() << "Mouse press - Wire Mode:" << wireMode << "Delete Mode:" << deleteMode << "Drag Mode:" << schematicView->dragMode();
+
     if (deleteMode) {
         QPointF pos = schematicView->mapToScene(event->pos());
         QGraphicsItem *item = scene->itemAt(pos, QTransform());
-        qDebug() << "Clicked item at:" << pos << (item ? item->type() : -1);  // Debug click
+        qDebug() << "Clicked at:" << pos << "Item:" << (item ? item->type() : -1);
         if (auto *comp = dynamic_cast<ComponentItem*>(item)) {
             deleteComponent(comp);
             event->accept();
+            return;
         } else if (auto *wire = dynamic_cast<WireItem*>(item)) {
             deleteWire(wire);
             event->accept();
+            return;
         } else {
-            qDebug() << "No deletable item found at click position";  // Debug miss
+            qDebug() << "No deletable item found at click position";
         }
+        event->accept();
         return;
     }
 
@@ -350,9 +386,10 @@ void MainWindow::mousePressEvent(QMouseEvent *event) {
             finishWire(pos);
         }
         event->accept();
-    } else {
-        QMainWindow::mousePressEvent(event);  // Allow drag in default mode
+        return;
     }
+
+    QMainWindow::mousePressEvent(event);
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event) {
@@ -364,6 +401,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event) {
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
+    qDebug() << "Key pressed:" << event->key();
     if (event->key() == Qt::Key_W) {
         toggleWireMode(!wireMode);
         event->accept();
@@ -374,7 +412,18 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
         addCapacitor();
         event->accept();
     } else if (event->key() == Qt::Key_D) {
-        toggleDeleteMode(!deleteMode);
+        // Check for a selected component and delete it
+        bool deleted = false;
+        for (auto *item : scene->selectedItems()) {
+            if (auto *comp = dynamic_cast<ComponentItem*>(item)) {
+                deleteComponent(comp);
+                deleted = true;
+                break;  // Delete only one component at a time
+            }
+        }
+        if (!deleted) {
+            toggleDeleteMode(!deleteMode);  // Toggle Delete Mode only if no component was deleted
+        }
         event->accept();
     } else {
         QMainWindow::keyPressEvent(event);
